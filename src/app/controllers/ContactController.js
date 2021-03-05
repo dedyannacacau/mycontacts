@@ -76,14 +76,6 @@ class ContactController {
 
     response.json(contact);
   }
-
-  async delete(request, response) {
-    const { id } = request.params;
-
-    await ContactsRepository.delete(id);
-
-    response.sendStatus(204);
-  }
 }
 
 // Singleton
